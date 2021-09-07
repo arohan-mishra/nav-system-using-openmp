@@ -149,7 +149,6 @@ void Dijkstra_Parallel(Vertex *vertices, Edge *edges, int *weights, Vertex *root
 int main()
 {
 	printf("==========PARALLEL IMPLEMENTATION OF DIJKSTRA ALGORITHM==========\n");
-	printf("\n\t\t\t\t\t\tS. DHANYA ABHIRAMI\n\t\t\t\t\t\t16BCE0965\n");
 	printf("Enter number of vertices: ");
 	scanf("%d",&V);
 	printf("Enter number of edges: ");
