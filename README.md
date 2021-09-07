@@ -1,7 +1,9 @@
 # nav-system-using-openmp
-PDC Project
+<h2>PDC Project</h2>
 
-To run OpenMP program:
-$ g++ -o <filename> -fopenmp <filename>.cpp
-$ export OMP_NUM_THREADS=4 (optional)
-$ ./<filename>
+<p>
+To run OpenMP program: <br>
+$ g++ -o <filename> -fopenmp <filename>.cpp <br>
+$ export OMP_NUM_THREADS=4 <br>
+$ ./<filename> <br>
+</p>
