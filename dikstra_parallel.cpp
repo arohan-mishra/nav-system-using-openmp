@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <omp.h>
+#include<stdio.h>
+#include<omp.h>
 #include<algorithm>
 
 #define INFINITY 100000
