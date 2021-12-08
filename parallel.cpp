@@ -100,7 +100,7 @@ int minimimPathVertex(Vertex *vertices, int *path_length)
     return 0;
 }
  
-// Dijkstra Algorithm
+// Dijkstra Algorithm 
 void Dijkstra_Parallel(Vertex *vertices, Edge *edges, int *weights, Vertex *root)
 {  
     double parallel_start, parallel_end;
