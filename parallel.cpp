@@ -1,3 +1,8 @@
+/**************  CSE4001 Parallel and Distributed Computing *******************
+***************       J component: Slot L21+L22             *******************
+***************     Navigation System Using OpenMP          ******************/
+
+//Importing the necessary header files
 #include <iostream>
 #include <omp.h>
 #include <algorithm>
@@ -6,18 +11,17 @@
 #include <fstream>
  
 using namespace std;
- 
-#define INFINITY 100000
-int V,E;
-int arr[9] = { 0 };
-int graph[9][9];
+
+//defining the important variables
+#define INFINITY 100000  //if no edge exists then length is said to be infinity
+int V,E;  //V = no. of vertices, E = no. of edges
+int graph[][10000]; //the nodes in a city inputted in form of a graph
  
 //Structure for vertex
 typedef struct
 {
-    int label;
-    bool visited;  
- 
+    int label; //vertex number
+    bool visited;  //status of the vertex whether it is visited or not. true means visted
 } Vertex;
  
 //Structure for directed edge from u to v
@@ -25,7 +29,6 @@ typedef struct
 {
     int u;
     int v;
- 
 } Edge;
  
 //Printing Shortest Path Length
@@ -150,40 +153,6 @@ void Dijkstra_Parallel(Vertex *vertices, Edge *edges, int *weights, Vertex *root
     parallel_end = omp_get_wtime();
     printShortestPathLength(path_length);
     printf("\nRunning time: %lf ms\n", (parallel_end - parallel_start)*1000);
-}
- 
-void convertStrtoArr(string str)
-{
-    int str_length = str.length();
- 
-    int j = 0, i;
- 
-    for (i = 0; i < 3; i++)
-    {
-        arr[i] = 0;
-    }
-   
-    // Traverse the string
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] == ' ')
-        {
-            j++;
-        }
-        else
-        {
-            arr[j] = arr[j] * 10 + (str[i] - 48);
-        }
-    }
- 
-    for(i = 0; i < 3; i++)
-    {
-        for(j = 0; j < 3; j++)
-        {
-            //cout << arr[j] << " ";
-            graph[i][j] = arr[j];
-        }
-    }
 }
 
 int main()
