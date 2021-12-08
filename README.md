@@ -9,4 +9,7 @@ $ ./filename <br>
 </p>
 
 ### Serial code: 
-<p> https://github.com/arohan-mishra/nav-system-using-openmp/edit/main/README.md </p>
+<p> https://github.com/arohan-mishra/nav-system-using-openmp/blob/main/dikjstra_serial.cpp </p>
+
+### Parallel code:
+<p> https://github.com/arohan-mishra/nav-system-using-openmp/blob/main/parallel.cpp </p>
