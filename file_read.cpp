@@ -38,8 +38,9 @@ int main()
             j++;
         }
 
-        else if(c == '\n')
+        else if(int(c) == 10 || int(c) == -1)
         {
+            graph[i][j] = num;
             n = j;
             num = 0;
             j = 0;
@@ -47,10 +48,12 @@ int main()
         }
     }
 
+    n++;
     fclose(city);
 
+    cout<<endl;
+    
     display(graph,i,n);
 
     return 0;
 }
-
