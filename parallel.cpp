@@ -60,7 +60,7 @@ int findEdgeWeight(Vertex u, Vertex v, Edge *edges, int *weights)
     return INFINITY;
 }
  
-//Get the minimum path length among the paths
+//Get the minimum path length among the paths 
 int minimimPathLength(int *path_length, Vertex *vertices)
 {
     int i;
