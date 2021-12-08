@@ -15,7 +15,7 @@ using namespace std;
 //defining the important variables
 #define INFINITY 100000  //if no edge exists then length is said to be infinity
 int V,E;  //V = no. of vertices, E = no. of edges
-int graph[][10000]; //the nodes in a city inputted in form of a graph
+int graph[1000][1000]; //the nodes in a city inputted in form of a graph
  
 //Structure for vertex
 typedef struct
@@ -161,7 +161,7 @@ int main()
 
     char c;
     int n, num = 0, i = 0, j = 0;
-    int graph[100][100];
+    int graph[1000][1000];
     E = 0;
 
     while(!feof(city)) 
